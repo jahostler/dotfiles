@@ -1,0 +1,11 @@
+{
+  "Namespace": {
+    "prefix": "ns",
+    "body": [
+      "namespace ${1:Name};",
+      "",
+      "$0"
+    ],
+    "description": "Namespace"
+  }
+}
