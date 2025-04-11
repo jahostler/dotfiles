@@ -1,0 +1,4 @@
+["~/.config/nvim"]
+	type="git-repo"
+	url = "git@jahostler.github.com:jahostler/my-neovim.git"
+	refreshPeriod = "1h"
