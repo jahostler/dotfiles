@@ -115,6 +115,7 @@ shopt -s histappend
 
 # aliases
 alias ..="cd .."
+alias cm="chezmoi"
 
 # default editor
 export EDITOR="/bin/nvim"
