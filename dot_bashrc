@@ -114,8 +114,9 @@ shopt -s expand_aliases
 shopt -s histappend
 
 # aliases
-alias ..="cd .."
-alias cm="chezmoi"
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
+fi
 
 # default editor
 export EDITOR="/bin/nvim"
