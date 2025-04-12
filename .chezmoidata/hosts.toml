@@ -1,0 +1,21 @@
+[hosts]
+
+[[hosts.local]]
+name = "nas-jhostler"
+op_id = "ogm3ynzlprbodyfezk2yb7ngwe"
+
+[[hosts.local]]
+name = "nas-backup"
+op_id = "cwgqoyajzxyd4bjwf3so5hy2j4"
+
+[[hosts.local]]
+name = "steamdeck"
+op_id = "3koye6s5styncgxexyfqp4qgmi"
+
+[[hosts.remote]]
+name = "git-personal"
+op_id = "5kkc23zk6zgdqcrrboajzsbuze"
+
+[[hosts.remote]]
+name = "git-personal-2"
+op_id = "jhe2v5oiodippfmvnnzeovs5ky"

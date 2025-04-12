@@ -1,0 +1,39 @@
+{{- if .is_personal_computer -}}
+Host *
+  IdentityAgent ~/.1password/agent.sock
+
+# Personal
+{{range .hosts.local -}} 
+Host {{ (onepassword .op_id).title }}
+  {{- range (onepassword .op_id).fields -}}
+  {{- if (eq .label "username")  }}
+  User {{ .value }}
+  {{- end }}
+  {{- if (eq .label "URL") }}
+  HostName {{ .value }}
+  {{- end }}
+  {{- if (eq .label "keyname") }}
+  IdentityFile ~/.ssh/{{ .value }}
+  IdentitiesOnly yes
+  {{- end }}
+  {{- end }}
+
+{{ end -}}
+# Remote
+{{range .hosts.remote -}} 
+Host {{ (onepassword .op_id).title }}
+  {{- range (onepassword .op_id).fields -}}
+  {{- if (eq .label "username")  }}
+  User {{ .value }}
+  {{- end }}
+  {{- if (eq .label "URL") }}
+  HostName {{ .value }}
+  {{- end }}
+  {{- if (eq .label "keyname") }}
+  IdentityFile ~/.ssh/{{ .value }}
+  IdentitiesOnly yes
+  {{- end }}
+  {{- end }}
+
+{{ end }}
+{{- end -}}

@@ -1,0 +1,11 @@
+# global flags, prompts for values during config init
+{{- $is_personal_computer := promptBoolOnce . "is_personal_computer" "Is this a personal computer? (true/false)" -}}
+
+pager = "less -R"
+
+[data]
+  is_personal_computer = {{ $is_personal_computer }}
+
+[add]
+	secrets = "error" # Throw error if you try to add a secret
+
