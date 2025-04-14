@@ -13,8 +13,4 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-if [[ -e ~/.bash_profile ]]; then
-  source ~/.bash_profile
-fi
-
 source $HOME/.aliases
